@@ -1,2 +1,2 @@
 # BVRexp
-Expansion of Base Variability Resolution tool
+Extension of Base Variability Resolution tool
