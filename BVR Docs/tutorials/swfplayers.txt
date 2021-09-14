@@ -1,0 +1,10 @@
+Adobe no longer supports Flash Player after Decembe/31/2020 and blocked Flash content from running in Flash Player beginning January/12/2021
+However there are softwares and sites that allow viewing files .swf, such as:
+
+
+/---------------------------------------------Portugues--------------------
+
+A Adobe não oferece mais suporte ao Flash Player após 31/12/2020 e bloqueou a execução de conteúdo em Flash no Flash Player a partir de 12/01/2021
+No entanto, existem softwares e sites que permitem a visualização de arquivos .swf, como:
+Online:
+	http://flashplayer.fullstacks.net/
