@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bvr:BVRModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bvr="http:///bvr.ecore/2.0.0" name="LaurinSPL">
+  <variabilityModel xsi:type="bvr:Choice" name="Car" target="//@variabilityModel/@ownedTargets.0" isImpliedByParent="true">
+    <member xsi:type="bvr:Choice" name="Gear" target="//@variabilityModel/@ownedTargets.12" isImpliedByParent="true">
+      <groupMultiplicity upper="1" lower="1"/>
+      <member xsi:type="bvr:Choice" name="Manual" target="//@variabilityModel/@ownedTargets.2">
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="Automatic" target="//@variabilityModel/@ownedTargets.1">
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint0">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.1"/>
+            <argument xsi:type="bvr:OperationCallExp" operation="logAnd">
+              <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.5"/>
+              <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.6"/>
+            </argument>
+          </expression>
+        </ownedConstraint>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <member xsi:type="bvr:Choice" name="Engine" target="//@variabilityModel/@ownedTargets.15" isImpliedByParent="true">
+      <groupMultiplicity upper="1" lower="1"/>
+      <member xsi:type="bvr:Choice" name="hp110" target="//@variabilityModel/@ownedTargets.9">
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="hp140" target="//@variabilityModel/@ownedTargets.6">
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <member xsi:type="bvr:Choice" name="Transmission" target="//@variabilityModel/@ownedTargets.18" isImpliedByParent="true">
+      <groupMultiplicity upper="1" lower="1"/>
+      <member xsi:type="bvr:Choice" name="WD4" target="//@variabilityModel/@ownedTargets.5">
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="WD2" target="//@variabilityModel/@ownedTargets.8">
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint3">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.8"/>
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.2"/>
+          </expression>
+        </ownedConstraint>
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint4">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.8"/>
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.9"/>
+          </expression>
+        </ownedConstraint>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <member xsi:type="bvr:Choice" name="Extras" target="//@variabilityModel/@ownedTargets.21">
+      <groupMultiplicity upper="1" lower="1"/>
+      <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint3">
+        <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+          <argument xsi:type="bvr:OperationCallExp" operation="logOr">
+            <argument xsi:type="bvr:OperationCallExp" operation="logOr">
+              <argument xsi:type="bvr:OperationCallExp" operation="logOr">
+                <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.22"/>
+                <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.36"/>
+              </argument>
+              <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.37"/>
+            </argument>
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.32"/>
+          </argument>
+          <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.6"/>
+        </expression>
+      </ownedConstraint>
+      <member xsi:type="bvr:Choice" name="DoubleTrunk" target="//@variabilityModel/@ownedTargets.24">
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="ExtraWheel" target="//@variabilityModel/@ownedTargets.25">
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="Manueuvering" target="//@variabilityModel/@ownedTargets.29">
+        <groupMultiplicity upper="1" lower="1"/>
+        <member xsi:type="bvr:Choice" name="ParkAssist" target="//@variabilityModel/@ownedTargets.22">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="BackingSensors" target="//@variabilityModel/@ownedTargets.23">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="Combos" target="//@variabilityModel/@ownedTargets.41">
+        <groupMultiplicity upper="1" lower="1"/>
+        <member xsi:type="bvr:Choice" name="Manueuvering_DT" target="//@variabilityModel/@ownedTargets.34">
+          <groupMultiplicity upper="1" lower="1"/>
+          <member xsi:type="bvr:Choice" name="ParkAssist_DT" target="//@variabilityModel/@ownedTargets.36">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <member xsi:type="bvr:Choice" name="BackingSensors_DT" target="//@variabilityModel/@ownedTargets.39">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="Manueuvering_EW" target="//@variabilityModel/@ownedTargets.35">
+          <groupMultiplicity upper="1" lower="1"/>
+          <member xsi:type="bvr:Choice" name="ParkAssist_EW" target="//@variabilityModel/@ownedTargets.37">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <member xsi:type="bvr:Choice" name="BackingSensors_EW" target="//@variabilityModel/@ownedTargets.40">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="DoubleTrunk_ExtraWheel" target="//@variabilityModel/@ownedTargets.30">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="Manueuvering_DT_EW" target="//@variabilityModel/@ownedTargets.31">
+          <groupMultiplicity upper="1" lower="1"/>
+          <member xsi:type="bvr:Choice" name="ParkAssist_DT_EW" target="//@variabilityModel/@ownedTargets.32">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <member xsi:type="bvr:Choice" name="BackingSensors_DT_EW" target="//@variabilityModel/@ownedTargets.33">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <ownedTargets name="Car"/>
+    <ownedTargets name="Automatic"/>
+    <ownedTargets name="Manual"/>
+    <ownedTargets name="Automaticc"/>
+    <ownedTargets name="Manuall"/>
+    <ownedTargets name="WD4"/>
+    <ownedTargets name="hp140"/>
+    <ownedTargets name="Choice8"/>
+    <ownedTargets name="WD2"/>
+    <ownedTargets name="hp110"/>
+    <ownedTargets name="Choice11"/>
+    <ownedTargets name="hp100"/>
+    <ownedTargets name="Gear"/>
+    <ownedTargets name="Choice15"/>
+    <ownedTargets name="Choice16"/>
+    <ownedTargets name="Engine"/>
+    <ownedTargets name="Choice18"/>
+    <ownedTargets name="Choice19"/>
+    <ownedTargets name="Transmission"/>
+    <ownedTargets name="Choice21"/>
+    <ownedTargets name="Choice22"/>
+    <ownedTargets name="Extras"/>
+    <ownedTargets name="ParkAssist"/>
+    <ownedTargets name="BackingSensors"/>
+    <ownedTargets name="DoubleTrunk"/>
+    <ownedTargets name="ExtraWheel"/>
+    <ownedTargets name="x4WD"/>
+    <ownedTargets name="x2WD"/>
+    <ownedTargets name="y4WD"/>
+    <ownedTargets name="Manueuvering"/>
+    <ownedTargets name="DoubleTrunk_ExtraWheel"/>
+    <ownedTargets name="Manueuvering_DT_EW"/>
+    <ownedTargets name="ParkAssist_DT_EW"/>
+    <ownedTargets name="BackingSensors_DT_EW"/>
+    <ownedTargets name="Manueuvering_DT"/>
+    <ownedTargets name="Manueuvering_EW"/>
+    <ownedTargets name="ParkAssist_DT"/>
+    <ownedTargets name="ParkAssist_EW"/>
+    <ownedTargets name="Choice36"/>
+    <ownedTargets name="BackingSensors_DT"/>
+    <ownedTargets name="BackingSensors_EW"/>
+    <ownedTargets name="Combos"/>
+    <note name="comment" kind="comment" expr=""/>
+  </variabilityModel>
+  <resolutionModels xsi:type="bvr:PosResolution" name="Car[2]" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
+    <members xsi:type="bvr:PosResolution" name="Gear" resolvedVSpec="//@variabilityModel/@member.0" resolvedChoice="//@variabilityModel/@member.0">
+      <members xsi:type="bvr:NegResolution" name="Manual" resolvedVSpec="//@variabilityModel/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.0/@member.0"/>
+      <members xsi:type="bvr:PosResolution" name="Automatic" resolvedVSpec="//@variabilityModel/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.0/@member.1"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="Engine" resolvedVSpec="//@variabilityModel/@member.1" resolvedChoice="//@variabilityModel/@member.1">
+      <members xsi:type="bvr:NegResolution" name="hp110" resolvedVSpec="//@variabilityModel/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.0"/>
+      <members xsi:type="bvr:PosResolution" name="hp140" resolvedVSpec="//@variabilityModel/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="Transmission" resolvedVSpec="//@variabilityModel/@member.2" resolvedChoice="//@variabilityModel/@member.2">
+      <members xsi:type="bvr:PosResolution" name="WD4" resolvedVSpec="//@variabilityModel/@member.2/@member.0" resolvedChoice="//@variabilityModel/@member.2/@member.0"/>
+      <members xsi:type="bvr:NegResolution" name="WD2" resolvedVSpec="//@variabilityModel/@member.2/@member.1" resolvedChoice="//@variabilityModel/@member.2/@member.1"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="Extras" resolvedVSpec="//@variabilityModel/@member.3" resolvedChoice="//@variabilityModel/@member.3">
+      <members xsi:type="bvr:NegResolution" name="DoubleTrunk" resolvedVSpec="//@variabilityModel/@member.3/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.0"/>
+      <members xsi:type="bvr:NegResolution" name="ExtraWheel" resolvedVSpec="//@variabilityModel/@member.3/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1"/>
+      <members xsi:type="bvr:NegResolution" name="Manueuvering" resolvedVSpec="//@variabilityModel/@member.3/@member.2" resolvedChoice="//@variabilityModel/@member.3/@member.2"/>
+      <members xsi:type="bvr:PosResolution" name="Combos" resolvedVSpec="//@variabilityModel/@member.3/@member.3" resolvedChoice="//@variabilityModel/@member.3/@member.3">
+        <members xsi:type="bvr:NegResolution" name="Manueuvering_DT" resolvedVSpec="//@variabilityModel/@member.3/@member.3/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.3/@member.0"/>
+        <members xsi:type="bvr:NegResolution" name="Manueuvering_EW" resolvedVSpec="//@variabilityModel/@member.3/@member.3/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.3/@member.1"/>
+        <members xsi:type="bvr:NegResolution" name="DoubleTrunk_ExtraWheel" resolvedVSpec="//@variabilityModel/@member.3/@member.3/@member.2" resolvedChoice="//@variabilityModel/@member.3/@member.3/@member.2"/>
+        <members xsi:type="bvr:PosResolution" name="Manueuvering_DT_EW" resolvedVSpec="//@variabilityModel/@member.3/@member.3/@member.3" resolvedChoice="//@variabilityModel/@member.3/@member.3/@member.3">
+          <members xsi:type="bvr:PosResolution" name="ParkAssist_DT_EW" resolvedVSpec="//@variabilityModel/@member.3/@member.3/@member.3/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.3/@member.3/@member.0"/>
+          <members xsi:type="bvr:NegResolution" name="BackingSensors_DT_EW" resolvedVSpec="//@variabilityModel/@member.3/@member.3/@member.3/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.3/@member.3/@member.1"/>
+        </members>
+      </members>
+    </members>
+  </resolutionModels>
+</bvr:BVRModel>

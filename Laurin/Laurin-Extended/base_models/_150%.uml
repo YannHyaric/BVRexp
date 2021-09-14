@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_G4qPYL3VEemVou7vC3OybA" name="Laurin">
+  <packagedElement xmi:type="uml:Class" xmi:id="_yjFWEA5WEeyBd8OsFlZ6JQ" name="Car">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_66Ap8xC1EeyCHLoFCpiDCw" name="shift" type="_8FhK8L6aEemKB4JPdDCLFw" aggregation="composite" association="_66Ap8BC1EeyCHLoFCpiDCw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7nTNwxC1EeyCHLoFCpiDCw" name="engine" type="_7LD6sMbmEemSwaLckIwAEA" aggregation="composite" association="_7nTNwBC1EeyCHLoFCpiDCw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_76q1sxC1EeyCHLoFCpiDCw" name="transmission" type="_tnY00L6XEemKB4JPdDCLFw" aggregation="composite" association="_76q1sBC1EeyCHLoFCpiDCw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8S8y0xC1EeyCHLoFCpiDCw" name="extraitems" type="_iZTZoA5XEeyBd8OsFlZ6JQ" association="_8S8y0BC1EeyCHLoFCpiDCw"/>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_8FhK8L6aEemKB4JPdDCLFw" name="Shift">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_18FHgL6aEemKB4JPdDCLFw" name="Manual">
+        <generalization xmi:type="uml:Generalization" xmi:id="_ICsXcBC2EeyCHLoFCpiDCw" general="_8FhK8L6aEemKB4JPdDCLFw"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_179ywL6aEemKB4JPdDCLFw" name="Automatic">
+        <generalization xmi:type="uml:Generalization" xmi:id="_IZCa4BC2EeyCHLoFCpiDCw" general="_8FhK8L6aEemKB4JPdDCLFw"/>
+      </nestedClassifier>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_7LD6sMbmEemSwaLckIwAEA" name="Engine">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_8o81AMbmEemSwaLckIwAEA" name="HP110">
+        <generalization xmi:type="uml:Generalization" xmi:id="_I2PUQBC2EeyCHLoFCpiDCw" general="_7LD6sMbmEemSwaLckIwAEA"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_LRbvML4REemKB4JPdDCLFw" name="HP140">
+        <generalization xmi:type="uml:Generalization" xmi:id="_JO99UBC2EeyCHLoFCpiDCw" general="_7LD6sMbmEemSwaLckIwAEA"/>
+      </nestedClassifier>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_tnY00L6XEemKB4JPdDCLFw" name="Transmission">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_tnb4IL6XEemKB4JPdDCLFw" name="WD2">
+        <generalization xmi:type="uml:Generalization" xmi:id="_J38B0BC2EeyCHLoFCpiDCw" general="_tnY00L6XEemKB4JPdDCLFw"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_tnbREL6XEemKB4JPdDCLFw" name="WD4">
+        <generalization xmi:type="uml:Generalization" xmi:id="_LAflUBC2EeyCHLoFCpiDCw" general="_tnY00L6XEemKB4JPdDCLFw"/>
+      </nestedClassifier>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_iZTZoA5XEeyBd8OsFlZ6JQ" name="ExtraItems">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Mi1xww5ZEeyBd8OsFlZ6JQ" name="parkassist" type="_LAOIcA5ZEeyBd8OsFlZ6JQ" association="_Mi1xwA5ZEeyBd8OsFlZ6JQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_M4i8Aw5ZEeyBd8OsFlZ6JQ" name="backingsensors" type="_iZTZqA5XEeyBd8OsFlZ6JQ" association="_M4i8AA5ZEeyBd8OsFlZ6JQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NwhF0w5ZEeyBd8OsFlZ6JQ" name="doubletrunk" type="_iZTZqg5XEeyBd8OsFlZ6JQ" association="_NwhF0A5ZEeyBd8OsFlZ6JQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OG928w5ZEeyBd8OsFlZ6JQ" name="extrawheel" type="_iZTZrA5XEeyBd8OsFlZ6JQ" association="_OG928A5ZEeyBd8OsFlZ6JQ"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_LAOIcA5ZEeyBd8OsFlZ6JQ" name="ParkAssist">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xj_A4BAUEeyVFbrdIJ4e9w" name="Cam">
+          <defaultValue xmi:type="uml:StringExpression" xmi:id="_UmKfUBAXEeyVFbrdIJ4e9w" name="Resolution">
+            <operand xmi:type="uml:LiteralInteger" xmi:id="_xj_A4hAUEeyVFbrdIJ4e9w" name="pixel number" value="220"/>
+            <operand xmi:type="uml:LiteralString" xmi:id="_xj_A4xAUEeyVFbrdIJ4e9w" name="pixels" value="px"/>
+          </defaultValue>
+        </ownedAttribute>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_iZTZqA5XEeyBd8OsFlZ6JQ" name="BackingSensors">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="__h8GUBAQEeyVFbrdIJ4e9w" name="Number of Sensors">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ClW0ABAREeyVFbrdIJ4e9w" value="2"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DKs8wBAREeyVFbrdIJ4e9w" value="8"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_DK2twBAREeyVFbrdIJ4e9w" value="4"/>
+        </ownedAttribute>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_iZTZqg5XEeyBd8OsFlZ6JQ" name="DoubleTrunk"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_iZTZrA5XEeyBd8OsFlZ6JQ" name="ExtraWheel"/>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_Mi1xwA5ZEeyBd8OsFlZ6JQ" memberEnd="_Mi1xww5ZEeyBd8OsFlZ6JQ _Mi1xxA5ZEeyBd8OsFlZ6JQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Mi1xwQ5ZEeyBd8OsFlZ6JQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Mi1xwg5ZEeyBd8OsFlZ6JQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Mi1xxA5ZEeyBd8OsFlZ6JQ" name="extraitems" type="_iZTZoA5XEeyBd8OsFlZ6JQ" association="_Mi1xwA5ZEeyBd8OsFlZ6JQ"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_M4i8AA5ZEeyBd8OsFlZ6JQ" memberEnd="_M4i8Aw5ZEeyBd8OsFlZ6JQ _M4i8BA5ZEeyBd8OsFlZ6JQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_M4i8AQ5ZEeyBd8OsFlZ6JQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_M4i8Ag5ZEeyBd8OsFlZ6JQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_M4i8BA5ZEeyBd8OsFlZ6JQ" name="extraitems" type="_iZTZoA5XEeyBd8OsFlZ6JQ" association="_M4i8AA5ZEeyBd8OsFlZ6JQ"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_NwhF0A5ZEeyBd8OsFlZ6JQ" memberEnd="_NwhF0w5ZEeyBd8OsFlZ6JQ _NwhF1A5ZEeyBd8OsFlZ6JQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NwhF0Q5ZEeyBd8OsFlZ6JQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NwhF0g5ZEeyBd8OsFlZ6JQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_NwhF1A5ZEeyBd8OsFlZ6JQ" name="extraitems" type="_iZTZoA5XEeyBd8OsFlZ6JQ" association="_NwhF0A5ZEeyBd8OsFlZ6JQ"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_OG928A5ZEeyBd8OsFlZ6JQ" memberEnd="_OG928w5ZEeyBd8OsFlZ6JQ _OG929A5ZEeyBd8OsFlZ6JQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OG928Q5ZEeyBd8OsFlZ6JQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OG928g5ZEeyBd8OsFlZ6JQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_OG929A5ZEeyBd8OsFlZ6JQ" name="extraitems" type="_iZTZoA5XEeyBd8OsFlZ6JQ" association="_OG928A5ZEeyBd8OsFlZ6JQ"/>
+      </nestedClassifier>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_66Ap8BC1EeyCHLoFCpiDCw" memberEnd="_66Ap8xC1EeyCHLoFCpiDCw _66Ap9BC1EeyCHLoFCpiDCw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_66Ap8RC1EeyCHLoFCpiDCw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_66Ap8hC1EeyCHLoFCpiDCw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_66Ap9BC1EeyCHLoFCpiDCw" name="car" type="_yjFWEA5WEeyBd8OsFlZ6JQ" association="_66Ap8BC1EeyCHLoFCpiDCw"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_7nTNwBC1EeyCHLoFCpiDCw" memberEnd="_7nTNwxC1EeyCHLoFCpiDCw _7nTNxBC1EeyCHLoFCpiDCw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7nTNwRC1EeyCHLoFCpiDCw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7nTNwhC1EeyCHLoFCpiDCw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_7nTNxBC1EeyCHLoFCpiDCw" name="car" type="_yjFWEA5WEeyBd8OsFlZ6JQ" association="_7nTNwBC1EeyCHLoFCpiDCw"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_76q1sBC1EeyCHLoFCpiDCw" memberEnd="_76q1sxC1EeyCHLoFCpiDCw _76q1tBC1EeyCHLoFCpiDCw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_76q1sRC1EeyCHLoFCpiDCw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_76q1shC1EeyCHLoFCpiDCw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_76q1tBC1EeyCHLoFCpiDCw" name="car" type="_yjFWEA5WEeyBd8OsFlZ6JQ" association="_76q1sBC1EeyCHLoFCpiDCw"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_8S8y0BC1EeyCHLoFCpiDCw" memberEnd="_8S8y0xC1EeyCHLoFCpiDCw _8S8y1BC1EeyCHLoFCpiDCw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8S8y0RC1EeyCHLoFCpiDCw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8S8y0hC1EeyCHLoFCpiDCw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8S8y1BC1EeyCHLoFCpiDCw" name="car" type="_yjFWEA5WEeyBd8OsFlZ6JQ" association="_8S8y0BC1EeyCHLoFCpiDCw"/>
+    </nestedClassifier>
+  </packagedElement>
+</uml:Model>
